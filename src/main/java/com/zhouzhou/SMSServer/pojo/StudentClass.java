@@ -2,12 +2,12 @@ package com.zhouzhou.SMSServer.pojo;
 
 /**
  * @author 周万宁
- * @className Student_class
+ * @className StudentClassMapper
  * @create 2023/4/3-15:02
  * @description 班级
  */
 
-public class Student_class {
+public class StudentClass {
 
     private String id; //课程id
     private String name; //班级名称
@@ -16,10 +16,10 @@ public class Student_class {
     private String stage; //阶段
 
 
-    public Student_class() {
+    public StudentClass() {
     }
 
-    public Student_class(String name, String teacher_id, String manager_id, String stage, String id) {
+    public StudentClass(String name, String teacher_id, String manager_id, String stage, String id) {
         this.name = name;
         this.teacher_id = teacher_id;
         this.manager_id = manager_id;
@@ -69,7 +69,7 @@ public class Student_class {
 
     @Override
     public String toString() {
-        return "Student_class{" +
+        return "StudentClassMapper{" +
                 "name='" + name + '\'' +
                 ", teacher_id='" + teacher_id + '\'' +
                 ", manager_id='" + manager_id + '\'' +

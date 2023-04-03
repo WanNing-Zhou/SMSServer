@@ -2,11 +2,13 @@ package com.zhouzhou.SMSServer.pojo;
 
 /**
  * @author 周万宁
- * @className Users
+ * @className User
  * @create 2023/4/3-19:51
  * @description 用户
  */
-public class Users {
+
+
+public class User {
     private String id; // id
     private String username; //用户名
     private String name;//用户姓名
@@ -15,11 +17,11 @@ public class Users {
     private int create_time;//创建时间
     private String role_id; //用户角色id
 
-    public Users() {
+    public User() {
 
     }
 
-    public Users(String id, String username, String name, String password, String phone, int create_time, String role_id) {
+    public User(String id, String username, String name, String password, String phone, int create_time, String role_id) {
         this.id = id;
         this.username = username;
         this.name = name;
@@ -87,7 +89,7 @@ public class Users {
 
     @Override
     public String toString() {
-        return "Users{" +
+        return "User{" +
                 "id='" + id + '\'' +
                 ", username='" + username + '\'' +
                 ", name='" + name + '\'' +
