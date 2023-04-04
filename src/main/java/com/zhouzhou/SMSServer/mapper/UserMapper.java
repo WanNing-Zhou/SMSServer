@@ -94,6 +94,4 @@ public interface UserMapper {
      **/
     User selectUserByIdAndPassword(@Param("id") String id,@Param("password") String password);
 
-
-
 }
