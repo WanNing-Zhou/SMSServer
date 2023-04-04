@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="text">
+<script>
+    let input = document.querySelector('input')
+    let username = 'kakxi';
+    let password = '123456'
+    fetch('/test/json',{
+        method:'POST',
+        headers:{ 'Content-Type': 'x-www-form-urlencoded;charset=UTF-8' },
+        body:{
+            username,
+            password
+        }
+    }).then(req => req.json())
+    .then(
+        req =>{
+            console.log(req)
+            input.value = req;
+        }
+    ).catch(err=>{
+        console.log(err)
+    })
+</script>
+</body>
+</html>

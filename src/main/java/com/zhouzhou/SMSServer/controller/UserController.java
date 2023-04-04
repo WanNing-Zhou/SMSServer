@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 /**
@@ -32,13 +33,20 @@ public class UserController {
         return user;
     }
     @RequestMapping(value="/test/json",method = RequestMethod.POST)
-    public String testJson(@RequestBody Map<String,String> map){
+    public String testJson(HttpServletRequest request){
         //@RequestBody 代表接收页面的json数据
         //@ResponseBody: 代表Controller返回json数据
         System.out.println("zwn");
-        System.out.println(map.get("username"));
-        System.out.println(map.get("password"));
+//        System.out.println(map.get("username"));
+//        System.out.println(map.get("password"));
+        System.out.println(request.getParameter("username"));
         return "{'state':'ok'}";
     }
+
+    @RequestMapping
+    public User userLogin(){
+        return new User();
+    }
+
 
 }
